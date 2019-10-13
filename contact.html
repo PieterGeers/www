@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Form</title>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<script defer src="script/formscript.js"></script>
+	</head>
+
+	<body class="contact">
+		<div class="contact-title">
+			<h1>Contact us!</h1>
+			<h2>Do you have any questions or just want to chat about your perfect sunrise / sunset date.<br> Fill out this form and we will try to make your perfect date come to live.</h2>
+		</div>
+
+		<div class="contact-form">
+					<form id="contact-form" method="GET" action="/" autocomplete="off">
+						<input class="form-control" id="name" type="text" name="name" placeholder="Your Name", required=""><br>
+						<div id="errorname"></div>
+
+						<input class="form-control" id="mail" type="text" name="mail" placeholder="Your Email", required=""><br>
+						<div id="errormail"></div>
+
+						<input class="form-control" id="subject" type="text" name="subject" placeholder="Subject", required=""><br>
+						<div id=errorsubject></div>
+
+						<textarea name="message" id="message" class="form-control" placeholder="Message" rows="4"></textarea><br>
+						<div id=errortext></div>
+
+						<input type="submit" class="form-control submit" value="SEND MESSAGE">
+					</form>
+		</div>
+	</body>
+
+</html>
