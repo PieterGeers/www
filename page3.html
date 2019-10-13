@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Form</title>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body class="contact">
+		<div class="contact-title">
+			<h1>Contact us!</h1>
+			<h2>Do you have any questions or just want to chat about your perfect sunrise / sunset date.<br> Fill out this form and we will try to make your perfect date come to live.</h2>
+		</div>
+
+		<div class="contact-form">
+					<form id="contact-form" method="post" action="php/contact-form-handler.php">
+						<input class="form-control" type="text" name="name" placeholder="Your Name", required=""><br>
+
+						<input class="form-control" type="text" name="mail" placeholder="Your Email", required=""><br>
+
+						<input class="form-control" type="text" name="subject" placeholder="Subject", required=""><br>
+						
+						<textarea name="message" class="form-control" placeholder="Message" rows="4"></textarea><br>
+
+						<input type="submit" class="form-control submit" value="SEND MESSAGE">
+					</form>
+		</div>
+	</body>
+
+</html>
