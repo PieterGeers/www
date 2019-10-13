@@ -62,3 +62,7 @@ form .submit:hover {
 	background-color: #f44336;
 	cursor: pointer;
 }
+
+.validation {
+	color: white;
+}

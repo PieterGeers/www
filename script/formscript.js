@@ -8,14 +8,12 @@ const subjectError = document.getElementById('errorsubject');
 const messageError = document.getElementById('errortext')
 const mailError = document.getElementById('errormail');
 
-const pattern = {
-	email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/
-}
+const email = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 
 
 form.addEventListener('submit', (e) => {
 	var int = 0;
-	if (name.value == '' || name.value == null || name.value.length == 1) {
+	if (name.value == '' || name.value == null || name.value.length <= 1) {
 		++int;
 		nameError.innerText = 'Name is required';
 	}
@@ -25,17 +23,20 @@ form.addEventListener('submit', (e) => {
 		subjectError.innerText = 'Subject is required'
 	}
 
-	if (!pattern[email].test(mail.value)){
+	if (mail.value == '' || mail.value == null || !email.test(mail.value)){
 		++int;
 		mailError.innerText = 'Email is required and must be valid. Ex: me@domain.com'
 	}
 
-	if (message.value.length <= 20) {
+	if (message.value == '' || message.value == null || message.value.length < 20) {
 		++int;
 		messageError.innerText = 'Message must contain at least 20 characters'
 	}
 
-	if (int > 0) {
-		e.preventDefault();
+	if (int == 0) {
+		form.reset();
+		document.getElementById('confirmation').innerText = 'Thank you!';
 	}
+	else {document.getElementById('confirmation').innerText = '';}
+	e.preventDefault();
 });

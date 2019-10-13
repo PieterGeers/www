@@ -13,20 +13,21 @@
 		</div>
 
 		<div class="contact-form">
-					<form id="contact-form" method="GET" action="/" autocomplete="off">
+					<form id="contact-form" method="/" action="/" autocomplete="off">
 						<input class="form-control" id="name" type="text" name="name" placeholder="Your Name", required=""><br>
-						<div id="errorname"></div>
+						<div class="validation" id="errorname"></div>
 
-						<input class="form-control" id="mail" type="text" name="mail" placeholder="Your Email", required=""><br>
-						<div id="errormail"></div>
+						<input class="form-control" id="mail" type="text" name="mail" placeholder="Your Email"><br>
+						<div class="validation" id="errormail"></div>
 
 						<input class="form-control" id="subject" type="text" name="subject" placeholder="Subject", required=""><br>
-						<div id=errorsubject></div>
+						<div class="validation" id=errorsubject></div>
 
 						<textarea name="message" id="message" class="form-control" placeholder="Message" rows="4"></textarea><br>
-						<div id=errortext></div>
+						<div class="validation" id=errortext></div>
 
 						<input type="submit" class="form-control submit" value="SEND MESSAGE">
+						<div><h1 class="validation" id=confirmation></h1></div>
 					</form>
 		</div>
 	</body>
