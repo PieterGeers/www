@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Contact Form</title>
-		<link href="Css/main.css" rel="stylesheet" type="text/css" />
+		<link href="Css/contact.css" rel="stylesheet" type="text/css" />
 		<script defer src="Script/formscript.js"></script>
 	</head>
 
@@ -14,16 +14,16 @@
 
 		<div class="contact-form">
 					<form id="contact-form" method="/" action="/" autocomplete="off">
-						<input class="form-control" id="name" type="text" name="name" placeholder="Your Name", required=""><br>
+						<input class="form-control" id="name" type="text" name="name" placeholder="Your Name" required="This field is required"><br>
 						<div class="validation" id="errorname"></div>
 
-						<input class="form-control" id="mail" type="text" name="mail" placeholder="Your Email"><br>
+						<input class="form-control" id="mail" type="text" name="mail" placeholder="Your Email" required="This field is required"><br>
 						<div class="validation" id="errormail"></div>
 
-						<input class="form-control" id="subject" type="text" name="subject" placeholder="Subject", required=""><br>
+						<input class="form-control" id="subject" type="text" name="subject" placeholder="Subject" required="This field is required"><br>
 						<div class="validation" id=errorsubject></div>
 
-						<textarea name="message" id="message" class="form-control" placeholder="Message" rows="4"></textarea><br>
+						<textarea name="message" id="message" class="form-control" placeholder="Message" rows="4" required="This field is required"></textarea><br>
 						<div class="validation" id=errortext></div>
 
 						<input type="submit" class="form-control submit" value="SEND MESSAGE">

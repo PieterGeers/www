@@ -1,4 +1,6 @@
 .contact {
+	height: 100vh;
+    width: 100%;
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -7,6 +9,7 @@
 	background-repeat: no-repeat;
 	background-position: top;
 	font-family: arial;
+	overflow: hidden;
 }
 
 .contact-title {

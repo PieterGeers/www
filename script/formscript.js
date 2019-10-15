@@ -1,38 +1,31 @@
 const name = document.getElementById('name');
 const mail = document.getElementById('mail');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
 const form = document.getElementById('contact-form');
 const nameError = document.getElementById('errorname');
-const subjectError = document.getElementById('errorsubject');
-const messageError = document.getElementById('errortext')
 const mailError = document.getElementById('errormail');
 
-const email = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+
+const nameTest = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/
+const emailTest = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 
 
 form.addEventListener('submit', (e) => {
 	var int = 0;
-	if (name.value == '' || name.value == null || name.value.length <= 1) {
+	//name validation
+	if (!nameTest.test(name.value)) {
 		++int;
-		nameError.innerText = 'Name is required';
+		nameError.innerText = 'Name is not valid. Ex: Firstname Lastname';
 	}
+	else {nameError.innerText = '';}
 
-	if (subject.value == '' || subject.value == null || subject.value.length <= 3) {
+	//email validation
+	if (!emailTest.test(mail.value)){
 		++int;
-		subjectError.innerText = 'Subject is required'
+		mailError.innerText = 'Email is is not valid. Ex: me@domain.com'
 	}
+	else {mailError.innerText = '';}
 
-	if (mail.value == '' || mail.value == null || !email.test(mail.value)){
-		++int;
-		mailError.innerText = 'Email is required and must be valid. Ex: me@domain.com'
-	}
-
-	if (message.value == '' || message.value == null || message.value.length < 20) {
-		++int;
-		messageError.innerText = 'Message must contain at least 20 characters'
-	}
-
+	//result
 	if (int == 0) {
 		form.reset();
 		document.getElementById('confirmation').innerText = 'Thank you!';
