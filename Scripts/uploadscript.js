@@ -28,12 +28,27 @@
 		}
 
 		xhr.onload = function() {
-			var data = this.responseText;
-			console.log(data);	
+			var data = JSON.parse(this.responseText);
+
+			displayUploads(data);
 		}
 
 		xhr.open('post', 'Php/upload.php')
 		xhr.send(formData);
+	}
+
+	function displayUploads(data) {
+		var uploads = document.getElementById('uploads'), 
+			anchor,
+			x;
+
+		for(x = 0; x < data.length; ++x) {
+			anchor = document.createElement('a');
+			anchor.href = data[x].file;
+			anchor.innerText = data[x].name;
+
+			uploads.appendChild(anchor);
+		}
 	}
 
 }());
