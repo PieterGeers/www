@@ -1,0 +1,87 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+#canvas {
+	background-image: url(../Resources/index.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid #fff;
+}
+
+ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.logo h1{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+	float: left;
+	padding-top: 20px;
+}
+
+.main {
+	max-width: 90%;
+	margin: auto;
+}
+
+#location {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#location h1 {
+	color: #fff;
+	font-size:50px;
+}
+
+#button{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#button button {
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+#button button:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+#myloc {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}

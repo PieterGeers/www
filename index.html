@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Webpage</title>
-		<link href="main.css" rel="stylesheet" type="text/css" />
+		<title>WWW-Internet</title>
+		<link href="Css/index.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
-		<h1>My Website</h1>
-		<ul>
-			<li>Home</li>
-			<li><a href="towerofhanoi.html">Tower of Hanoi</a></li>
-			<li><a href="audioplayer.html">Lister to music here!</a></li>
-			<li><a href="videoplayer.html">Watch videos here!</a></li>
-			<li><a href="contact.html">Contact us!</a></li>
-		</ul>
-		<h2>This is my homepage</h2>
-		<p>And all of my homepage content</p>
-	</body>
+		<div id="canvas">
+			<div class="main">
+				<div class="logo">
+					<h1>just another website</h1>
+				</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="towerofhanoi.html">Game</a></li>
+					<li><a href="audioplayer.html">Music</a></li>
+					<li><a href="videoplayer.html">Videos</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<div id="location">
+					<h1>We know your location</h1>
+				</div>
+				<div id="button">
+					<button onclick="myLocation()">click to test</button>
+				</div>
+				<div id="myloc"></div>
+			</div>
+		</div>
+		
 
+	</body>
+	<script src="Scripts/locationscript.js"></script>
 </html>
