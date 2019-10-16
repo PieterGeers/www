@@ -33,7 +33,7 @@
 			displayUploads(data);
 		}
 
-		xhr.open('post', 'Php/upload.php')
+		xhr.open('post', 'upload.php')
 		xhr.send(formData);
 	}
 
