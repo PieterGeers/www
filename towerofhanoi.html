@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tower of Hanoi</title>
+		<link rel="stylesheet" type="text/css" href="Css/toh.css">
+		<script src="Scripts/jquery-1.10.2.min.js"></script>
+	</head>
+	<body>
+		<div id="dnd" align="center">
+			<div class="empty">
+				<div class="fill" draggable="true"></div>
+			</div>
+			<div class="empty"></div>
+			<div class="empty"></div>
+			<div class="empty"></div>
+			<div class="empty"></div>
+		</div>
+
+		<div id="canvas">
+			<div id="title">
+				<h1>Towers Of Hanoi</h1>
+			</div>
+
+			<div class="moves"></div>
+			<div id="towers">
+				<div class="t" value="0">
+					<ul id="t1" value="0" class="base">
+						<ul class="line1"></ul>
+					</ul>
+				</div>
+				<div class="t" value="1">
+					<ul id="t2" value="1" class="base">
+						<ul class="line2"></ul>
+					</ul>
+				</div>
+				<div class="t" value="2">
+					<ul id="t3" value="2" class="base">
+						<ul class="line3"></ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="discno" align="center">
+				Enter Number of Discs: 
+				<input type="number" id="box" max="7" min="3">
+		</div>
+		<div id="restart" align="center">
+			<button type="button" class="buttons">Restart</button>
+		</div>
+		
+	</body>
+	<script src="Scripts/toh.js"></script>
+	<script src="Scripts/dragndrop.js"></script>
+</html>
