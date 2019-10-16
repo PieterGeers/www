@@ -28,8 +28,8 @@
 		}
 
 		xhr.onload = function() {
-			var data = JSON.parse(this.responseText);
 			console.log(this.responseText);
+			var data = JSON.parse(this.responseText);
 			displayUploads(data);
 		}
 
