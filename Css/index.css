@@ -47,7 +47,7 @@ ul li a:hover {
 
 #location {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -59,7 +59,7 @@ ul li a:hover {
 
 #button{
 	position: absolute;
-	top: 60%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -79,9 +79,21 @@ ul li a:hover {
 
 #myloc {
 	position: absolute;
-	top: 70%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: #fff;
 	text-align: center;
+}
+#map{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid #000;
+}
+.invis {
+	display: none;
 }
